@@ -9,18 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const platform_browser_1 = require('@angular/platform-browser');
-const app_component_1 = require('./app.component');
-const foto_module_1 = require('./foto/foto.module');
-let AppModule = class AppModule {
+const foto_component_1 = require('./foto.component');
+let FotoModule = class FotoModule {
 };
-AppModule = __decorate([
+FotoModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        declarations: [foto_component_1.FotoComponent],
+        exports: [foto_component_1.FotoComponent]
     }), 
     __metadata('design:paramtypes', [])
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], FotoModule);
+exports.FotoModule = FotoModule;
+//# sourceMappingURL=foto.module.js.map

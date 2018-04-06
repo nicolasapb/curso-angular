@@ -7,6 +7,6 @@ import { AppComponent } from './app.component'
     declarations: [ AppComponent ],
     bootstrap: [ AppComponent ]
 })
-class AppModule {
+export class AppModule {
 
 }

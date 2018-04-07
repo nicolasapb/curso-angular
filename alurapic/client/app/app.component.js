@@ -9,7 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const http_1 = require('@angular/http');
 let AppComponent = class AppComponent {
+    constructor(http) {
+        console.log(`http`, http);
+    }
 };
 AppComponent = __decorate([
     core_1.Component({
@@ -17,7 +21,7 @@ AppComponent = __decorate([
         selector: 'app',
         templateUrl: './app.component.html'
     }), 
-    __metadata('design:paramtypes', [])
+    __metadata('design:paramtypes', [http_1.Http])
 ], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

@@ -12,11 +12,12 @@ const core_1 = require('@angular/core');
 const platform_browser_1 = require('@angular/platform-browser');
 const app_component_1 = require('./app.component');
 const foto_module_1 = require('./foto/foto.module');
+const http_1 = require('@angular/http');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule],
+        imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule, http_1.HttpModule],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent]
     }), 

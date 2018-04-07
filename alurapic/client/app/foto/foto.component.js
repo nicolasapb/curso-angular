@@ -11,6 +11,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 let FotoComponent = class FotoComponent {
 };
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', Object)
+], FotoComponent.prototype, "titulo", void 0);
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', Object)
+], FotoComponent.prototype, "url", void 0);
 FotoComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

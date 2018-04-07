@@ -13,8 +13,9 @@ const http_1 = require('@angular/http');
 let AppComponent = class AppComponent {
     constructor(http) {
         this.fotos = [];
-        http
-            .get('v1/fotos').subscribe(response => this.fotos = response.json());
+        http.get('v1/fotos')
+            .map(res => res.json())
+            .subscribe(foto => this.fotos = foto, erro => console.log(erro));
     }
 };
 AppComponent = __decorate([

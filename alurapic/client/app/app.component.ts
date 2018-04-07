@@ -11,7 +11,10 @@ export class AppComponent {
     fotos: Array<Object> = []
 
     constructor(http: Http) {
-        http
-            .get('v1/fotos').subscribe(response => this.fotos = response.json()) 
+        http.get('v1/fotos')
+            .map(res => res.json())
+            .subscribe(
+                foto => this.fotos = foto, 
+                erro => console.log(erro)) 
     }
 }

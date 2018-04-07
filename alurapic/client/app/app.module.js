@@ -13,6 +13,7 @@ const platform_browser_1 = require('@angular/platform-browser');
 const app_component_1 = require('./app.component');
 const foto_module_1 = require('./foto/foto.module');
 const http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([

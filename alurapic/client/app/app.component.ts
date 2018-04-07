@@ -8,7 +8,10 @@ import { Http } from '@angular/http'
 })
 export class AppComponent { 
     
+    fotos: Array<Object> = []
+
     constructor(http: Http) {
-        console.log(`http`, http)
+        http
+            .get('v1/fotos').subscribe(response => this.fotos = response.json()) 
     }
 }

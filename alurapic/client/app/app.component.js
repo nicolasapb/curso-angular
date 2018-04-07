@@ -12,7 +12,9 @@ const core_1 = require('@angular/core');
 const http_1 = require('@angular/http');
 let AppComponent = class AppComponent {
     constructor(http) {
-        console.log(`http`, http);
+        this.fotos = [];
+        http
+            .get('v1/fotos').subscribe(response => this.fotos = response.json());
     }
 };
 AppComponent = __decorate([

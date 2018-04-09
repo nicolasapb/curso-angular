@@ -19,7 +19,10 @@ let ListagemComponent = class ListagemComponent {
     }
 };
 ListagemComponent = __decorate([
-    core_1.Component({ moduleId: module.id, selector: 'listagem', templateUrl: './listagem.entryComponents.hmtl' }), 
+    core_1.Component({
+        moduleId: module.id,
+        selector: 'listagem',
+        templateUrl: './listagem.component.html' }), 
     __metadata('design:paramtypes', [http_1.Http])
 ], ListagemComponent);
 exports.ListagemComponent = ListagemComponent;

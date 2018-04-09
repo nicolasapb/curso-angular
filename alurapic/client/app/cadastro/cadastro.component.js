@@ -15,7 +15,7 @@ CadastroComponent = __decorate([
     core_1.Component({
         moduleId: module.id,
         selector: 'cadastro',
-        templateUrl: './cadastro.compeonent.html'
+        templateUrl: './cadastro.component.html'
     }), 
     __metadata('design:paramtypes', [])
 ], CadastroComponent);

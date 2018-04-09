@@ -9,20 +9,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const platform_browser_1 = require('@angular/platform-browser');
 const app_component_1 = require('./app.component');
-const foto_module_1 = require('./foto/foto.module');
-const painel_module_1 = require('./painel/painel.module');
 const cadastro_component_1 = require('./cadastro/cadastro.component');
 const listagem_component_1 = require('./listagem/listagem.component');
+const platform_browser_1 = require('@angular/platform-browser');
+const foto_module_1 = require('./foto/foto.module');
+const painel_module_1 = require('./painel/painel.module');
 const http_1 = require('@angular/http');
+const app_routes_1 = require('./app.routes');
 require('rxjs/add/operator/map');
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule, painel_module_1.PainelModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent, cadastro_component_1.CadastroComponent, listagem_component_1.ListagemComponent],
+        imports: [
+            platform_browser_1.BrowserModule,
+            foto_module_1.FotoModule,
+            painel_module_1.PainelModule,
+            http_1.HttpModule,
+            app_routes_1.routing
+        ],
+        declarations: [
+            app_component_1.AppComponent,
+            cadastro_component_1.CadastroComponent,
+            listagem_component_1.ListagemComponent
+        ],
         bootstrap: [app_component_1.AppComponent]
     }), 
     __metadata('design:paramtypes', [])

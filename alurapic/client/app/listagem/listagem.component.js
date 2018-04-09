@@ -9,11 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-let AppComponent = class AppComponent {
+const http_1 = require('@angular/http');
+let ListagemComponent = class ListagemComponent {
+    constructor(http) {
+        this.fotos = [];
+        http.get('v1/fotos')
+            .map(res => res.json())
+            .subscribe(foto => this.fotos = foto, erro => console.log(erro));
+    }
 };
-AppComponent = __decorate([
-    core_1.Component({ moduleId: module.id, selector: 'app', templateUrl: './app.component.html' }), 
-    __metadata('design:paramtypes', [])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+ListagemComponent = __decorate([
+    core_1.Component({ moduleId: module.id, selector: 'listagem', templateUrl: './listagem.entryComponents.hmtl' }), 
+    __metadata('design:paramtypes', [http_1.Http])
+], ListagemComponent);
+exports.ListagemComponent = ListagemComponent;
+//# sourceMappingURL=listagem.component.js.map

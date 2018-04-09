@@ -9,21 +9,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const platform_browser_1 = require('@angular/platform-browser');
-const app_component_1 = require('./app.component');
-const foto_module_1 = require('./foto/foto.module');
-const painel_module_1 = require('./painel/painel.module');
-const http_1 = require('@angular/http');
-require('rxjs/add/operator/map');
-let AppModule = class AppModule {
+const painel_component_1 = require('./painel.component');
+let PainelModule = class PainelModule {
 };
-AppModule = __decorate([
+PainelModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule, painel_module_1.PainelModule, http_1.HttpModule],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        declarations: [painel_component_1.PainelComponent],
+        exports: [painel_component_1.PainelComponent]
     }), 
     __metadata('design:paramtypes', [])
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], PainelModule);
+exports.PainelModule = PainelModule;
+//# sourceMappingURL=painel.module.js.map

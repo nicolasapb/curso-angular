@@ -7,16 +7,17 @@ import { FotoComponent } from '../foto/foto.component'
     templateUrl: './cadastro.component.html'    
 })
 export class CadastroComponent {
-
-    @Input() titulo: string 
-    @Input() url: string
-    @Input() descricao: string
-
+ 
     foto = new FotoComponent()   
+
+    constructor() {
+        this.foto.titulo = 'A'
+        this.foto.url = 'B'
+        this.foto.descricao = 'C'
+    }
 
     cadastrar(event: Event) {
         event.preventDefault()
-        this.foto.titulo = this.titulo  
         console.log(this.foto);
         
     }

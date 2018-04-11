@@ -9,8 +9,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
+const foto_component_1 = require('../foto/foto.component');
 let CadastroComponent = class CadastroComponent {
+    constructor() {
+        this.foto = new foto_component_1.FotoComponent();
+    }
+    cadastrar(event) {
+        event.preventDefault();
+        this.foto.titulo = this.titulo;
+        console.log(this.foto);
+    }
 };
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', String)
+], CadastroComponent.prototype, "titulo", void 0);
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', String)
+], CadastroComponent.prototype, "url", void 0);
+__decorate([
+    core_1.Input(), 
+    __metadata('design:type', String)
+], CadastroComponent.prototype, "descricao", void 0);
 CadastroComponent = __decorate([
     core_1.Component({
         moduleId: module.id,

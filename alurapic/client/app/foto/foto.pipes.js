@@ -11,8 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 let FiltroPorTitulo = class FiltroPorTitulo {
     transform(fotos, digitado) {
-        console.log(fotos);
-        console.log(digitado);
+        return fotos.filter(foto => foto.titulo.toLowerCase().includes(digitado.toLowerCase()));
     }
 };
 FiltroPorTitulo = __decorate([

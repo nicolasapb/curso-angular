@@ -9,6 +9,7 @@ import { FotoModule } from './foto/foto.module'
 import { PainelModule } from './painel/painel.module'
 import { HttpModule } from '@angular/http'
 import { routing } from './app.routes'
+import { FormsModule } from '@angular/forms'
 
 import 'rxjs/add/operator/map'
 
@@ -19,7 +20,8 @@ import 'rxjs/add/operator/map'
         FotoModule, 
         PainelModule, 
         HttpModule, 
-        routing 
+        routing,
+        FormsModule
     ],
 
     declarations: [

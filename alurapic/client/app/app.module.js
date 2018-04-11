@@ -17,6 +17,7 @@ const foto_module_1 = require('./foto/foto.module');
 const painel_module_1 = require('./painel/painel.module');
 const http_1 = require('@angular/http');
 const app_routes_1 = require('./app.routes');
+const forms_1 = require('@angular/forms');
 require('rxjs/add/operator/map');
 let AppModule = class AppModule {
 };
@@ -27,7 +28,8 @@ AppModule = __decorate([
             foto_module_1.FotoModule,
             painel_module_1.PainelModule,
             http_1.HttpModule,
-            app_routes_1.routing
+            app_routes_1.routing,
+            forms_1.FormsModule
         ],
         declarations: [
             app_component_1.AppComponent,

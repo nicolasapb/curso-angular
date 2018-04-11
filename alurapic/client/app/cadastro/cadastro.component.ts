@@ -10,12 +10,6 @@ export class CadastroComponent {
  
     foto = new FotoComponent()   
 
-    constructor() {
-        this.foto.titulo = 'A'
-        this.foto.url = 'B'
-        this.foto.descricao = 'C'
-    }
-
     cadastrar(event: Event) {
         event.preventDefault()
         console.log(this.foto);

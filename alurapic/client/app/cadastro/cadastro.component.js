@@ -13,9 +13,6 @@ const foto_component_1 = require('../foto/foto.component');
 let CadastroComponent = class CadastroComponent {
     constructor() {
         this.foto = new foto_component_1.FotoComponent();
-        this.foto.titulo = 'A';
-        this.foto.url = 'B';
-        this.foto.descricao = 'C';
     }
     cadastrar(event) {
         event.preventDefault();

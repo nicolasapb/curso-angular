@@ -9,16 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('@angular/core');
-const foto_component_1 = require('./foto.component');
-const foto_pipes_1 = require('./foto.pipes');
-let FotoModule = class FotoModule {
+let FiltroPorTitulo = class FiltroPorTitulo {
+    transform(fotos, digitado) {
+        console.log(fotos);
+        console.log(digitado);
+    }
 };
-FotoModule = __decorate([
-    core_1.NgModule({
-        declarations: [foto_component_1.FotoComponent, foto_pipes_1.FiltroPorTitulo],
-        exports: [foto_component_1.FotoComponent, foto_pipes_1.FiltroPorTitulo]
+FiltroPorTitulo = __decorate([
+    core_1.Pipe({
+        name: 'filtroPorTitulo'
     }), 
     __metadata('design:paramtypes', [])
-], FotoModule);
-exports.FotoModule = FotoModule;
-//# sourceMappingURL=foto.module.js.map
+], FiltroPorTitulo);
+exports.FiltroPorTitulo = FiltroPorTitulo;
+//# sourceMappingURL=foto.pipes.js.map

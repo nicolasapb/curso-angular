@@ -10,13 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 const foto_component_1 = require('../foto/foto.component');
+const http_1 = require('@angular/http');
 let CadastroComponent = class CadastroComponent {
-    constructor() {
+    constructor(http) {
         this.foto = new foto_component_1.FotoComponent();
+        this.http = http;
     }
     cadastrar(event) {
         event.preventDefault();
-        console.log(this.foto);
+        let headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        const options = { headers };
+        this.http
+            .post('v1/fotos', JSON.stringify(this.foto), options)
+            .subscribe(() => {
+            this.foto = new foto_component_1.FotoComponent();
+        }, erro => console.log(erro));
     }
 };
 CadastroComponent = __decorate([
@@ -25,7 +34,7 @@ CadastroComponent = __decorate([
         selector: 'cadastro',
         templateUrl: './cadastro.component.html'
     }), 
-    __metadata('design:paramtypes', [])
+    __metadata('design:paramtypes', [http_1.Http])
 ], CadastroComponent);
 exports.CadastroComponent = CadastroComponent;
 //# sourceMappingURL=cadastro.component.js.map

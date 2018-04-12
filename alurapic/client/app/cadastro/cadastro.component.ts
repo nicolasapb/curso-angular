@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core'
 import { FotoComponent } from '../foto/foto.component'
+import { Http, Headers, RequestOptionsArgs } from '@angular/http';
 
 @Component({
     moduleId: module.id,
@@ -8,11 +9,26 @@ import { FotoComponent } from '../foto/foto.component'
 })
 export class CadastroComponent {
  
-    foto = new FotoComponent()   
+    foto = new FotoComponent()    
+    http: Http
+
+    constructor(http: Http) {
+        this.http = http
+    }
 
     cadastrar(event: Event) {
         event.preventDefault()
-        console.log(this.foto);
+
+        let headers = new Headers()
+        headers.append('Content-Type', 'application/json')
+
+        const options: RequestOptionsArgs = { headers }
         
+        this.http
+            .post('v1/fotos', JSON.stringify(this.foto), options)
+            .subscribe(() => {
+                this.foto = new FotoComponent()
+                
+            }, erro => console.log(erro))
     }
 }

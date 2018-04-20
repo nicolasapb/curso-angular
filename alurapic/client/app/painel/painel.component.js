@@ -10,6 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('@angular/core');
 let PainelComponent = class PainelComponent {
+    ngOnInit() {
+        this.titulo =
+            this.titulo.length > 7
+                ? this.titulo.substr(0, 7) + '...'
+                : this.titulo;
+    }
 };
 __decorate([
     core_1.Input(), 

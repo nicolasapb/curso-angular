@@ -29,7 +29,8 @@ AppModule = __decorate([
             painel_module_1.PainelModule,
             http_1.HttpModule,
             app_routes_1.routing,
-            forms_1.FormsModule
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule
         ],
         declarations: [
             app_component_1.AppComponent,

@@ -9,7 +9,7 @@ import { FotoModule } from './foto/foto.module'
 import { PainelModule } from './painel/painel.module'
 import { HttpModule } from '@angular/http'
 import { routing } from './app.routes'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import 'rxjs/add/operator/map'
 
@@ -21,7 +21,8 @@ import 'rxjs/add/operator/map'
         PainelModule, 
         HttpModule, 
         routing,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
 
     declarations: [

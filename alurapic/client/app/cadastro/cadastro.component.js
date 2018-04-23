@@ -11,10 +11,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 const core_1 = require('@angular/core');
 const foto_component_1 = require('../foto/foto.component');
 const http_1 = require('@angular/http');
+const forms_1 = require('@angular/forms');
 let CadastroComponent = class CadastroComponent {
-    constructor(http) {
+    constructor(http, fb) {
         this.foto = new foto_component_1.FotoComponent();
         this.http = http;
+        this.meuForm = fb.group({
+            titulo: ['', forms_1.Validators.required],
+            url: ['', forms_1.Validators.required],
+            descricao: ['']
+        });
     }
     cadastrar(event) {
         event.preventDefault();
@@ -34,7 +40,7 @@ CadastroComponent = __decorate([
         selector: 'cadastro',
         templateUrl: './cadastro.component.html'
     }), 
-    __metadata('design:paramtypes', [http_1.Http])
+    __metadata('design:paramtypes', [http_1.Http, forms_1.FormBuilder])
 ], CadastroComponent);
 exports.CadastroComponent = CadastroComponent;
 //# sourceMappingURL=cadastro.component.js.map
